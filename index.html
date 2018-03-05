@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Emotiphy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Will Ferrell Feels</title>
+	<!-- Reset CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
 
-	<div id="emotionButtons"
+<header>
+	<div class="container" id="title">Will Ferrell feels...</div>
+</header>
+<div class="container">
+	<!--Buttons-->
+	<div id="feelingButtons">
+	<!--jquery buttons inserted here-->
+	</div>	
 
+	<!--Main Content-->
+	<div class-="row">
+		<!--User Form Section-->
+		<div class="col-md-4 col-md-push-8">
+			<form id="feeling-form">
+				<label for="feeling-input">Add an feeling</label><br>
+				<input type="text" id="feeling-input"><br>
+				<input id="addFeeling" type="submit" value="Submit">
+			</form>
+		</div>
+		<!--Gifs Section-->
+		<div class="col-md-8 col-md-pull-4">
+			<div id="feels">
+			<!--gif are shown here-->
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">&copy; 2018 Evelyn Cude</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/ajax.js"></script>
 </body>
 </html>
