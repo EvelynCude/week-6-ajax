@@ -47,6 +47,7 @@ $("#addFeeling").click(function(event){
 	event.preventDefault();
 	var feeling = $("#feeling-input").val().trim();
 	feelings.push(feeling);
+	$("#feeling-input").val("");
 	renderButtons();
 });
 
