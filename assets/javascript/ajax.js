@@ -55,6 +55,25 @@ $(document).on("click", ".feel-btn", displayfeelings);
 
 //	Function to start gif on click and stop gif on click
 $(document).on("click", "img", function(){
+	var source = $(this).attr("src");
+	//	This piece splits the src url of the clicked img into two  
+	//	and saves the item in index 1 of the split url (s.gif or .gif) in the variable srcSplit
+	var srcSplit = source.split("_")[1];
+	//	replaces the ending for the still url with the ending of the animated url and saves it in the animatedSrc variable
+	var animateSrc = source.replace("_s.gif", ".gif");
+	//	replaces the ending for the animated url with the ending of the still url and saves it in the stillSrc variable
+	var stillSrc = source.replace(".gif", "_s.gif");
+		//	if the url ending of the clicked img end in s.gif, replace the url with the animated url stored in the animatedSrc variable
+		if (srcSplit == "s.gif"){
+			$(this).attr("src", animateSrc);
+		//	otherwise replace the current url with the still url stored in the stillSrc variable
+		}else{
+			$(this).attr("src", stillSrc);
+		}
+});
+
+//	This function works to to start/stop gif on click as well (used original instead)
+/*$(document).on("click", "img", function(){
 	console.log("clicked");
 	var src = $(this).attr("src");
 		if($(this).hasClass('still')){
@@ -66,4 +85,4 @@ $(document).on("click", "img", function(){
 	    	$(this).attr('src', src.replace(".gif", "_s.gif"));
 	   		$(this).addClass("still");
 		}
-});
+});*/
