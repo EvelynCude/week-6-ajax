@@ -23,8 +23,8 @@ function displayfeelings(){
 				var p = $("<p>").text("Rating: " + results[j].rating);
 				var gif = $("<img>").attr("src", results[j].images.fixed_height_still.url);
 				gif.addClass("still");
-				feelingDiv.append(p);
 				feelingDiv.append(gif);
+				feelingDiv.append(p);
 				$("#feels").append(feelingDiv);
 			}
 	});
